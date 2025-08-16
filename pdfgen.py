@@ -28,7 +28,7 @@ def convert_images_to_pdf(image_folder, output_pdf):
             img_width, img_height = img.size
             aspect_ratio = img_width / img_height
             pdf_width, pdf_height = A4
-            # pdf_height = pdf_width / aspect_ratio  # Adjusting height based on aspect ratio
+            pdf_height = pdf_width / aspect_ratio  # Adjusting height based on aspect ratio
             c.setPageSize((pdf_width, pdf_height))
             c.drawImage(image_path, 0, 0, img_width, img_height,)
             c.showPage()
